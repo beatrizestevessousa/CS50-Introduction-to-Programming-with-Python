@@ -1,16 +1,12 @@
-def main():
-    time = convert(input('What time is it? '))
-    if 7 <= time <= 8:
-        print('breakfast time')
-    elif 12 <= time <= 13:
-        print('lunch time')
-    elif 18 <= time <= 19:
-        print('dinner time')
+calc = input('Expression: ').split(' ')
 
+if calc[1] == '+':
+    result = float(int(calc[0]) + int(calc[2]))
+elif calc[1] == '-':
+    result = float(int(calc[0]) - int(calc[2]))
+elif calc[1] == '*':
+    result = float(int(calc[0]) * int(calc[2]))
+else:
+    result = float(int(calc[0]) / int(calc[2]))
 
-def convert(time):
-    time = time.split(':')
-    return float(time[0]) + (float(time[1]) / 60)
-
-if __name__ == "__main__":
-    main()
+print(result)
